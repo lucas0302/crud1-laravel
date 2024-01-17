@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card" style="margin:20px;">
-  <div class="card-header">Cadastrar um novo Aluno.</div>
+  <div class="card-header">Cadastrar um novo Aluno</div>
   <div class="card-body">
 
       <form action="{{ url('student') }}" method="post">
