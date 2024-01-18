@@ -14,12 +14,10 @@ class StudentController extends Controller
         return view ('students.index')->with('students', $students);// with-> serve para pegar os dados do bd e colocar na pagina index
     }
 
-
     public function create()
     {
         return view('students.create');
     }
-
 
     public function store(Request $request)
     {
@@ -28,20 +26,17 @@ class StudentController extends Controller
         return redirect('student')->with('flash_message', 'Student Addedd!');
     }
 
-
     public function show($id)
     {
         $student = Student::find($id);
         return view('students.show')->with('students', $student);
     }
 
-
     public function edit($id)
     {
         $student = Student::find($id);
         return view('students.edit')->with('students', $student);
     }
-
 
     public function update(Request $request, $id)
     {
@@ -50,7 +45,6 @@ class StudentController extends Controller
         $student->update($input);
         return redirect('student')->with('flash_message', 'student Updated!');
     }
-
 
     public function destroy($id)
     {
