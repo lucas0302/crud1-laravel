@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->string("adress");
             $table->string("mobile");
-            $table->timestamp();//cria 2 coluna no banco de dados created_at e o updated_at
+            $table->timestamps(); //cria 2 coluna no banco de dados created_at e o updated_at
         });
     }
 

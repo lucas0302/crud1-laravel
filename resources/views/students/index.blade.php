@@ -33,13 +33,13 @@
                                         <td>{{ $item->mobile }}</td>
 
                                         <td>
-                                            <a href="{{ url('student' . $item->id) }}" title="visualizar estudante"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Visualizar</button></a>
-                                            <a href="{{ url('student' . $item->id . '/edit') }}" title="Editar estudante"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
+                                            <a href="{{ url('/student/' . $item->id) }}" title="visualizar estudante"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Visualizar</button></a>
+                                            <a href="{{ url('/student/' . $item->id . '/edit') }}" title="Editar estudante"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
 
-                                            <form method="POST" action="{{ url('/student' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="{{ url('/student/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="apagar estudante" onclick="return confirm('você que apagar mesmo?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Apagar</button>
+                                                <button type="submit" class="btn btn-danger btn-sm" title="apagar estudante" onclick="return confirm('você quer apagar mesmo?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Apagar</button>
                                             </form>
                                         </td>
                                     </tr>
