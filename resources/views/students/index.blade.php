@@ -33,7 +33,7 @@
                                         <td>{{ $item->mobile }}</td>
 
                                         <td>
-                                            <a href="{{ url('/student/' . $item->id) }}" title="visualizar estudante"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Visualizar</button></a>
+                                            <a href="{{ url('/student/' . $item->id )}}" title="visualizar estudante"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Visualizar</button></a>
                                             <a href="{{ url('/student/' . $item->id . '/edit') }}" title="Editar estudante"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
 
                                             <form method="POST" action="{{ url('/student/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
