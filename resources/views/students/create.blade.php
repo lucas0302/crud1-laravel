@@ -5,7 +5,7 @@
   <div class="card-header">Cadastrar um novo Aluno</div>
   <div class="card-body">
 
-      <form action="{{ url('student') }}" method="post">
+      <form action="{{ url('student') }}" method="post"> 
         {!! csrf_field() !!}
         <label>Nome</label><br>
         <input type="text" name="name" id="name" class="form-control"><br>
