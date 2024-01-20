@@ -8,14 +8,12 @@ use App\Models\Student; //add Student Model - Data is coming from the database v
 class StudentController extends Controller
 {
 
-    public function index()
-    {
+    public function index(){
         $students = Student::all();// responsaval por buncar no os registro na tabela Student
         return view ('students.index')->with('students', $students);// with-> serve para pegar os dados do bd e colocar na pagina index
     }
 
-    public function create()
-    {
+    public function create(){
         return view('students.create');// serve para mostrar um view com um formulario para cadastro
     }
 
