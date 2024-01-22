@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("adress");
-            $table->string("mobile");
-            $table->timestamps(); //cria 2 coluna no banco de dados created_at e o updated_at
+            $table->string('name');
+            $table->string('address');
+            $table->string('mobile');
+            $table->timestamps();//cria 2 coluna no banco de dados created_at e o updated_at
         });
     }
 
