@@ -45,6 +45,6 @@ class StudentController extends Controller
 
     public function destroy($id) {
         Student::destroy($id);// esse metodo pega o id do aluno espesifico na tabela student e apaga ele do bd
-        return redirect('student')->with('flash_message', 'Student deleted!');// apois apagar os dado retorna para tela de alunos cadastrado
+        return redirect()->back()->with('flash_message', 'Student deleted!');// apois apagar os dado retorna para tela de alunos cadastrado
     }
 }

@@ -9,6 +9,7 @@
                 <h5 class="card-title">Nome : {{ $students->name }}</h5>
                 <p class="card-text">Endereço : {{ $students->address }}</p>
                 <p class="card-text">Celular : {{ $students->mobile }}</p>
+                <a href="/student" class="btn btn-success">volta</a>
             </div>
             <hr />
         </div>

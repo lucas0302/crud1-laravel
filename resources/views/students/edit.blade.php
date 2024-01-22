@@ -2,10 +2,10 @@
 @section('content')
 
 <div class="card" style="margin:20px;">
-  <div class="card-header">Edite o estudante</div>
+  <div class="card-header">Edite os dados do estudante</div>
   <div class="card-body">
 
-      <form action="{{ url('student/' .$students->id) }}" method="post">
+      <form action="{{ url('student/' .$students->id)}}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
         <input type="hidden" name="id" id="id" value="{{$students->id}}" id="id" />
@@ -17,7 +17,6 @@
         <input type="text" name="mobile" id="mobile" value="{{$students->mobile}}" class="form-control"><br>
         <input type="submit" value="Atualizar" class="btn btn-success"><br>
     </form>
-
   </div>
 </div>
 
