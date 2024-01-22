@@ -38,11 +38,11 @@ class StudentController extends Controller
         $student = Student::find($id);//consulta no banco de dado pelo Id do aluno e add na variavel $student
         $input = $request->all(); //recebe os dado do formulario de edição e add na variavel $input
         $student->update($input); //att os dado do aluno no bd para os novo dados que foi add no input
-        return redirect('student')->with('flash_message', 'student Updated!');// //se o cadastro funcionar ele volta para a pagina student
+        return redirect('student');// //se o cadastro funcionar ele volta para a pagina student
     }
 
     public function destroy($id) {
         Student::destroy($id);// esse metodo pega o id do aluno espesifico na tabela student e apaga ele do bd
-        return redirect()->back()->with('flash_message', 'Student deleted!');// apois apagar os dado retorna para tela de alunos cadastrado
+        return redirect()->back(); // apois apagar os dado retorna para tela de alunos cadastrado
     }
 }
